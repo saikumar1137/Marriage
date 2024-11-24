@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Details</title>
+    <!-- Google Fonts for Elegant Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FAD0C4, #FFD1FF); /* Soft Pastel Gradient */
+            color: #444;
+        }
+        header {
+            background-color: #8A2BE2; /* Elegant Purple */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: white;
+            font-family: 'Pacifico', cursive; /* Beautiful Script Font */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ff6fd1; /* Soft Pink Hover */
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .bride-groom {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            justify-content: space-evenly;
+        }
+        .bride, .groom {
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+        }
+        .bride img, .groom img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+        .wedding-info {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+        }
+
+        .invitation {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #8A2BE2; /* Matching Elegant Purple */
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: white;
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Carousel Styling */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 2em;
+            border-radius: 50%;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Wedding of Sai Kumar & Sai Harshitha</h1>
+    <nav>
+        <a href="#bride-groom">Meet the Couple</a>
+        <a href="#wedding-info">Wedding Details</a>
+        <a href="#invitation">Wedding Invitation</a>
+    </nav>
+</header>
+
+<!-- Bride and Groom Details -->
+<section id="bride-groom">
+    <h2>Wedding Moments</h2>
+    <!-- Image Carousel -->
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <img src="https://raw.githubusercontent.com/saikumar1137/HTML-Page/main/WhatsApp%20Image%202024-11-11%20at%2010.09.23_92189b61.jpg" alt="Wedding Photo 1">
+            <img src="https://raw.githubusercontent.com/saikumar1137/HTML-Page/main/WhatsApp%20Image%202024-11-11%20at%2010.09.23_92189b61.jpg" alt="Wedding Photo 2">
+            <img src="https://raw.githubusercontent.com/saikumar1137/HTML-Page/main/WhatsApp%20Image%202024-11-11%20at%2010.09.23_92189b61.jpg" alt="Wedding Photo 3">
+            <img src="https://raw.githubusercontent.com/saikumar1137/HTML-Page/main/WhatsApp%20Image%202024-11-11%20at%2010.09.23_92189b61.jpg" alt="Wedding Photo 4">
+        </div>
+        <!-- Left and Right Arrows -->
+        <button class="arrow arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="arrow arrow-right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Wedding Date, Time & Location -->
+<section id="wedding-info">
+    <h2>Wedding Details</h2>
+    <div class="wedding-info">
+        <div class="date">
+            <h3>Date: Feb 8, 2025</h3>
+            <p>Time: 10:45 AM</p>
+        </div>
+        <div class="location">
+            <h3>Location: KSR Function Hall</h3>
+            <p>Kurnool, Andhra Pradesh</p>
+        </div>
+    </div>
+</section>
+
+<!-- Wedding Invitation -->
+<section id="invitation">
+    <h2>You’re Invited!</h2>
+    <div class="invitation">
+        <p>We are excited to invite you to the wedding of</p>
+        <p><strong>Sai Kumar & Sai Harshitha</strong></p>
+        <p>We would be honored to have you join us on our special day!</p>
+        <p><strong>Wedding Date:</strong> Feb 8, 2025</p>
+        <p><strong>Time:</strong> 10:40 AM</p>
+        <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/GF362Nu5kDecWJ769" target="_blank">KSR Functional Hall, Kurnool, AP</a></p>
+        <p>Come celebrate with us as we begin our new journey together!</p>
+    </div>
+</section>
+
+<footer>
+    <p>Thank you for being a part of our special day!</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+
+    // Get the container holding the images
+    const imagesContainer = document.querySelector('.carousel-images');
+    const images = document.querySelectorAll('.carousel-images img');
+    
+    function moveSlide(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1; // Loop back to the last image
+        }
+        if (currentIndex >= images.length) {
+            currentIndex = 0; // Loop back to the first image
+        }
+        
+        // Move the carousel by applying a transform to the container
+        imagesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+</body>
+</html>
